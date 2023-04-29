@@ -53,10 +53,14 @@ if (isset($_POST['acao_incluir'])) {
         echo $linha . "<br>";
     }
 
+} else if(isset($_POST['acao_pesquisar'])){
+     $email = $_POST['email'];
+     $nome = pesquisar($email);
+
 } else {
     echo "Não recebi nenhuma ação";
 }
 
 echo "<h1>Aguarde... retornará para a tela principal em 3 segundos...</h1>";
 
-header("refresh: 3; url = index.php");
+header("refresh: 3; url = index.php?nome=$nome&email=$email");

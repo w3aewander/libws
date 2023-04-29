@@ -4,6 +4,8 @@
  *
  */
 
+header('Content-Type: text/html; charset=utf-8');
+
 ini_set("display_errors", 1);
 ini_set("error_reporting", E_ALL&~E_NOTICE);
 
@@ -150,4 +152,32 @@ function ler()
 
     return $registro;
 
+}
+
+function pesquisar($email){
+    $email = $_POST['email'];
+
+    echo "Pesquisando e-mail $email ...";
+
+    $dados = ler();
+    $nome_encontrado = "";
+
+    foreach( $dados as $dado){
+        //wanderlei silva;wander.silva@gmail
+        $linha = explode(";", $dado);
+
+        //somente faz o processamento se linha contém dados..
+        if ( $linha[0] && $linha[1] ){
+            
+            $email_encontrado = trim( $linha[1]);
+            
+            if ( $email == $email_encontrado ){
+                //retorna os dados dados encontrados                
+                $nome_encontrado = $linha[0];
+                break;
+            } 
+        }
+    }
+
+    return $nome_encontrado;
 }

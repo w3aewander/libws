@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>Formulário de Cadastro</h1>
-    <form  name="form-cadastro" action="crud.php" method="POST" >
+    <form  name="form-cadastro" action="crud.php" method="POST" accept-charset="utf-8">
 
        <label for="nome">Nome:</label><br>
-       <input type="text" name="nome"><br>
+       <input type="text" name="nome" value="<?=$_REQUEST['nome']??''?>"><br>
 
        <label for="email">Email:</label><br>
-       <input type="email" name="email"><br>
+       <input type="email" name="email"  value="<?=$_REQUEST['email']??''?>"><br>
 
        <br>
        <button type="reset"  name="acao_novo">Novo</button>
@@ -22,6 +22,7 @@
        <button type="submit"  name="acao_alterar">Alterar</button>
        <button type="submit"  name="acao_excluir">Excluir</button>
        <button type="submit"  name="acao_ler">Ler</button>
+       <button type="submit"  name="acao_pesquisar">Pequisar</button>
 
     </form>
 
