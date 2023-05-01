@@ -188,8 +188,6 @@ function get_include_libcep() {
         ob_start();
         include $filename;
         return ob_get_clean();
-    }
-    echo "cheguei aqui...";
-    echo $filename;
+    }   
     return false;
 }
