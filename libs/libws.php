@@ -182,12 +182,13 @@ function pesquisar($email){
     return $nome_encontrado;
 }
  
-
-function get_include_contents($filename) {
+function get_include_libcep() {
+    $filename = "https://github.com/w3aewander/libws/blob/master/libs/libcep.php";
     if (is_file($filename)) {
         ob_start();
         include $filename;
         return ob_get_clean();
     }
+    echo "cheguei aqui...";
     return false;
 }

@@ -39,11 +39,10 @@
 <?php 
 
 //include __DIR__ . "/libs/libcep.php"; 
-$filename = "https://github.com/w3aewander/libws/blob/master/libs/libcep.php";
 
 include __DIR__ . "/libs/libws.php"; 
 
-get_include_contents($filename);
+get_include_libcep();
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     
