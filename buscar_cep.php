@@ -45,6 +45,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     $cep = $_POST['cep'];
     $endereco = buscarEndereco($cep);
 
+    $coords = @exibirCoordenadas($endereco->logradouro . " - " . $endereco->localidade . "," . $endereco->uf);
+
 }
 
 ?> 
@@ -74,7 +76,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     <button type="submit">Buscar</button>
 </form>
 
-
+  <?php print_r($coords??' --')?>
 
 </body>
 </html>
