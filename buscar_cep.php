@@ -41,23 +41,6 @@
 include __DIR__ . "/libs/libcep.php"; 
 include __DIR__ . "/libs/libws.php"; 
 
-$libcalc = "https://github.com/w3aewander/libws/blob/master/libs/libcalc.php?action=somar&num1=10&num2=5";
-
-function get_include_contents($filename) {
-    
-   if (is_file($filename)) {
-       ob_start();
-       include $filename;
-       return ob_get_clean();
-   }   
-   return false;
-}
-
-get_include_contents($libcalc);
-//get_include_contents($libcep);
-
-echo somar();
-
 if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $cep = $_POST['cep'];
