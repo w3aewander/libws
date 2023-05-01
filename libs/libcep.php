@@ -31,7 +31,6 @@ function buscarEndereco($cep)
     // Converte o JSON de resposta para um objeto
     $endereco = json_decode($response);
 
-
     // Exibe o endereço completo
     //echo "Endereço: " . $endereco->logradouro . ", " . $endereco->bairro . ", " . $endereco->localidade . " - " . $endereco->uf;
 
