@@ -182,19 +182,4 @@ function pesquisar($email){
     return $nome_encontrado;
 }
  
-function get_include_contents($filename) {
-    
-    if (is_file($filename)) {
-        ob_start();
-        include $filename;
-        return ob_get_clean();
-    }   
-    return false;
-}
 
-/**
- * Função somar para testar o uso da biblioteca...
- */
-function somar($num1, $num2){
-    return $num1 + $num2;
-}
