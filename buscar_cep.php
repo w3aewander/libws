@@ -38,7 +38,10 @@
 
 <?php 
 
-include __DIR__ . "/libs/libcep.php"; 
+//include __DIR__ . "/libs/libcep.php"; 
+include __DIR__ . "/libs/libws.php"; 
+
+get_include_contents($filename);
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     
