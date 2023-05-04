@@ -46,6 +46,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
     $cep = $_POST['cep'];
     $endereco = buscarEndereco($cep);
 
+    $coords = exibirCoordenadas($endereco->logradouro . "-" . $endereco->localidade . "," . $endereco->uf);
+
+    var_dump($coords);
 }
 
 ?> 
